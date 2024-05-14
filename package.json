@@ -15,7 +15,7 @@
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/styled": "^11.11.5",
-    "@joyid/ckb": "^0.0.6",
+    "@joyid/ckb": "^0.0.7",
     "@nervosnetwork/ckb-sdk-core": "^0.109.1",
     "@nervosnetwork/ckb-sdk-utils": "^0.109.1",
     "axios": "^1.6.8",

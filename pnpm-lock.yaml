@@ -15,8 +15,8 @@ dependencies:
     specifier: ^11.11.5
     version: 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.2)(react@18.3.1)
   '@joyid/ckb':
-    specifier: ^0.0.6
-    version: 0.0.6
+    specifier: ^0.0.7
+    version: 0.0.7
   '@nervosnetwork/ckb-sdk-core':
     specifier: ^0.109.1
     version: 0.109.1
@@ -2195,9 +2195,9 @@ packages:
       { integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA== }
     dev: true
 
-  /@joyid/ckb@0.0.6:
+  /@joyid/ckb@0.0.7:
     resolution:
-      { integrity: sha512-V7SfcWJ3hWrbxibHkRYxd7rXViLLJYSxuDg2/KQikEQMPYHW/FtFLO8EWNOa8a/rMBjJ7EhYKcUxiGAAq8ecRQ== }
+      { integrity: sha512-i+z1MWaPMmm71dPYLo0384VPosPnl/ivfzu+h9XPLwy1cFXgGYwDyG/7vIeFsbKLKrEA1jFAfReZ7p4YUfE2UA== }
     dev: false
 
   /@jridgewell/gen-mapping@0.3.5:
