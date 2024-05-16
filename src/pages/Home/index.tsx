@@ -23,17 +23,13 @@ function truncateMiddle(str = '', takeLength = 6, tailLength = takeLength, pad =
 
 export const Home = () => {
   const account = useAccount();
-  const { onCopy, hasCopied } = useClipboard(account?.address ?? '');
+  const { onCopy, hasCopied } = useClipboard(account?.address!);
   const navi = useNavigate();
   const setAccount = useSetAccountInfo();
-  const { data: capacity } = useQuery(
-    ['ckb-capacity', account?.address],
-    () => getCellsCapacity(account?.address ?? ''),
-    {
-      enabled: account?.address !== null,
-      refetchInterval: 1000 * 10,
-    },
-  );
+  const { data: capacity } = useQuery(['ckb-capacity', account?.address!], () => getCellsCapacity(account?.address!), {
+    enabled: !!account?.address,
+    refetchInterval: 1000 * 10,
+  });
 
   if (account === null) {
     return <Navigate to={RoutePath.Root} replace />;
