@@ -62,7 +62,7 @@ export const Home = () => {
       </Stat>
 
       <Button colorScheme="teal" w="240px" onClick={() => navi(RoutePath.SignSpore)}>
-        Sign Spore CKB Raw Tx
+        Sign Spore Creation CKB Tx
       </Button>
 
       <Button colorScheme="teal" w="240px" variant="outline" onClick={() => setAccount(null)}>

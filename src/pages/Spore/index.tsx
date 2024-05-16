@@ -50,7 +50,7 @@ export function SignSporeCkbRawTx() {
           onChange={(e) => setRawTx(e.target.value)}
         />
         <Button colorScheme="teal" w="240px" onClick={signCkbTx} isLoading={loading}>
-          Sign Spore CKB Raw TX
+          Sign Spore Creation CKB TX
         </Button>
 
         {hash ? (
