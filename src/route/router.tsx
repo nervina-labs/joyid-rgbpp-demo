@@ -3,6 +3,7 @@ import { Home } from '../pages/Home';
 import { RoutePath } from './path';
 import { Root } from '../pages/Root';
 import { Layout } from '../components/Layout';
+import { SignSporeCkbRawTx } from '../pages/Spore';
 
 export const routers: RouteObject[] = [
   {
@@ -17,6 +18,10 @@ export const routers: RouteObject[] = [
       {
         path: RoutePath.Home,
         element: <Home />,
+      },
+      {
+        path: RoutePath.SignSpore,
+        element: <SignSporeCkbRawTx />,
       },
     ],
   },

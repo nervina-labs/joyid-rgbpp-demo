@@ -18,13 +18,13 @@
     "@joyid/ckb": "^0.0.7",
     "@nervosnetwork/ckb-sdk-core": "^0.109.1",
     "@nervosnetwork/ckb-sdk-utils": "^0.109.1",
+    "@rgbpp-sdk/ckb": "0.0.0-snap-20240516055530",
     "axios": "^1.6.8",
     "jotai": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
-    "react-router-dom": "^6.23.1",
-    "rgbpp": "^0.1.0"
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
