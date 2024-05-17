@@ -5,3 +5,5 @@ export const CKB_INDEXER_URL = import.meta.env.VITE_APP_CKB_INDEXER_URL ?? 'http
 export const JOY_ID_URL = import.meta.env.VITE_APP_JOY_ID_URL ?? 'https://testnet.joyid.dev';
 
 export const JOY_ID_SERVER_URL = import.meta.env.VITE_APP_JOY_ID_SERVER_URL ?? 'https://api.testnet.joyid.dev';
+
+export const AGGREGATOR_URL = import.meta.env.VITE_APP_AGGREGATOR_URL ?? 'https://cota.nervina.dev/aggregator';
