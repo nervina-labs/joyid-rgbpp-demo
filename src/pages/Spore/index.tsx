@@ -1,6 +1,17 @@
 import { useState } from 'react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { Button, VStack, Textarea, Alert, AlertIcon, AlertTitle, AlertDescription, Link, Text } from '@chakra-ui/react';
+import {
+  Button,
+  VStack,
+  Textarea,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  Link,
+  Text,
+  HStack,
+} from '@chakra-ui/react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { CKBTransaction, signRawTransaction } from '@joyid/ckb';
 import { useAccount } from '../../hooks';
@@ -9,7 +20,8 @@ import { atom, useAtom } from 'jotai';
 import { useIsMobileLayout } from '../../hooks/useIsMobileLayout';
 import { buildJoyIDCellToSporeCreation, collector } from '../../rgbpp';
 
-const CKB_RAW_TX_PLACEHOLDER = `Please enter CKB raw tx similar to the following format: 
+const CKB_RAW_TX_PLACEHOLDER = `Please enter CKB tx similar to the following format: 
+
 {"version":"0x0","cellDeps":[{"outPoint":{"txHash":"0xf1de59e973b85791ec32debbba08dff80c63197e895eb95d67fc1e9f6b413e00","index":"0x0"},"depType":"code"}],"headerDeps":[],"inputs":[{"previousOutput":{"index":"0x4","txHash":"0x215c160043b26d5e50c61e57a15e98d66c730ab8b39c9765c5cf49ebd1a36caf"},"since":"0x0"}],"outputs":[{"capacity":"0x59c78b6d2","lock":{"codeHash":"0x00cdf8fab0f8ac638758ebf5ea5e4052b1d71e8a77b9f43139718621f6849326","hashType":"type","args":"0x065602fce8d8ea00209d038c786495e8c37b0e55dddf4a08befdc1aba32d099e"}}],"outputsData":["0x6200000010000000190000003e00000005000000646f622f30210000007b226964223a342c22646e61223a2231363565336464653138663732613236227d200000009c5ef9d69d2ba84516a367af41edcdd221c31cee3312d0c7c195ccbe384196a2"],"witnesses":[]}`;
 
 const rawTxAtom = atom<string>('');
@@ -41,6 +53,17 @@ export function SignSporeCkbRawTx() {
   return (
     <div className="App">
       <VStack spacing={4}>
+        <HStack>
+          <Text>You should get the ckbTx from the </Text>
+          <Link
+            href="https://github.com/ckb-cell/rgbpp-sdk/blob/632608b1bcceb592adedc98dff81372455ae35b2/examples/rgbpp/spore/launch/3-create-spores.ts#L92"
+            isExternal
+            color="blue"
+            textDecoration="underline"
+          >
+            Spore Creation Example
+          </Link>
+        </HStack>
         <Textarea
           value={rawTx}
           name="rawTx"
